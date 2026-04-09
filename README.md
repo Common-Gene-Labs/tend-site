@@ -1,6 +1,6 @@
 # Tend: Recovery Care — Marketing Site
 
-Public marketing site for [Tend: Recovery Care](https://apps.apple.com/us/app/tend-recovery-care/id6760955362), a free iOS and macOS app that transforms discharge paperwork into a structured recovery schedule.
+Public marketing site for [Tend: Recovery Care](https://apps.apple.com/us/app/tend-recovery-care/id6760955362), a free iOS app that transforms discharge paperwork into a structured recovery schedule.
 
 Built and maintained by [Common Gene Labs](https://commongenelabs.com).
 
