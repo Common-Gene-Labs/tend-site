@@ -7,10 +7,17 @@ Built and maintained by [Common Gene Labs](https://commongenelabs.com).
 ---
 
 ## Pages
-
+ 
 - `index.html` — Main marketing page
 - `privacy.html` — Privacy policy
-
+- `support.html` — Support page and FAQ
+- `404.html` — Custom 404 page
+ 
+## Files
+ 
+- `sitemap.xml` — Sitemap for search engine indexing
+- `robots.txt` — Crawler instructions
+- `CNAME` — Custom domain configuration (`tendrecovery.app`)
 ---
 
 ## Stack
