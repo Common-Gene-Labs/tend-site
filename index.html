@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tend: Recovery Care — Discharge instructions, turned into a plan.</title>
   <meta name="description" content="Tend turns discharge paperwork into a clear recovery schedule. Free for iPhone and Mac. No account required." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tendrecovery.app/" />
+  <meta property="og:title" content="Tend: Recovery Care" />
+  <meta property="og:description" content="Turns discharge paperwork into a clear recovery schedule. Free for iPhone and Mac. No account required." />
+  <meta property="og:image" content="https://tendrecovery.app/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tend: Recovery Care" />
+  <meta name="twitter:description" content="Turns discharge paperwork into a clear recovery schedule. Free for iPhone and Mac. No account required." />
+  <meta name="twitter:image" content="https://tendrecovery.app/og-image.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tendrecovery.app/" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -640,7 +661,7 @@
   <!-- NAV -->
   <nav id="nav">
     <a href="/" class="nav-logo">Tend</a>
-    <a href="#download" class="nav-cta">Download Free</a>
+    <a href="https://apps.apple.com/us/app/tend-recovery-care/id6760955362" class="nav-cta">Download Free</a>
   </nav>
 
   <!-- HERO -->
@@ -772,9 +793,8 @@
   <section class="cta-section" id="download">
     <h2 class="cta-headline reveal">Free for iPhone and Mac. No account needed.</h2>
     <p class="cta-sub reveal">Download Tend and turn the paperwork into a plan you can actually follow.</p>
-    <a href="https://apps.apple.com/us/app/tend-recovery-care/id6760955362" class="app-store-badge reveal">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 814 1000"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-42.3-150.3-109.2c-42.6-62.8-81.6-162.9-81.6-238.1 0-166.5 108.6-254.9 215.6-254.9 71.6 0 130.9 47.2 175.4 47.2 42.8 0 109.7-50.1 190.9-50.1zm-134.3-50.2c36.3-42.2 62.1-101.1 62.1-160 0-8.1-.6-16.3-2-23.5-59.3 2.3-128.7 39.6-170.1 88.1-32.5 37.2-62.9 96.1-62.9 155.8 0 8.7 1.4 17.4 2 20.1 3.4.6 8.7 1.3 14 1.3 52.8 0 117.3-35.3 156.9-81.8z"/></svg>
-      Download on the App Store
+    <a href="https://apps.apple.com/us/app/tend-recovery-care/id6760955362" class="app-store-badge reveal" target="_blank" rel="noopener">
+      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" style="height: 52px; width: auto;" />
     </a>
     <p class="cta-note reveal">Free. iPhone &amp; Mac. No account. No ads.</p>
   </section>
@@ -784,12 +804,13 @@
     <a href="https://commongenelabs.com" class="footer-logo">A Common Gene Labs product</a>
     <div class="footer-links">
       <a href="https://commongenelabs.com/about">About</a>
-      <a href="mailto:hello@commongenelabs.com">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#630b060f0f0c23000c0e0e0c0d04060d060f0201104d000c0e">Contact</a>
+      <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Sticky nav
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
@@ -799,7 +820,7 @@
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add('visible');
