@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Tend: Recovery Care</title>
+  <meta name="description" content="Get help with Tend: Recovery Care. Contact support or find answers to common questions." />
+  <link rel="canonical" href="https://tendrecovery.app/support.html" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F4EE;
+      --cream-dark: #EDE9E0;
+      --green-deep: #1E3A2F;
+      --green-mid: #2D5540;
+      --green-light: #4A7C5F;
+      --warm-black: #1C1814;
+      --warm-gray: #6B6560;
+      --warm-gray-light: #A89F98;
+      --accent: #C17F4A;
+      --white: #FDFBF8;
+    }
+    body {
+      background: var(--cream);
+      color: var(--warm-black);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+    nav {
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--green-deep);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-size: 0.8rem;
+      color: var(--warm-gray);
+      text-decoration: none;
+      border-bottom: 1px solid var(--warm-gray-light);
+      padding-bottom: 2px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .nav-back:hover { color: var(--green-deep); border-color: var(--green-deep); }
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem 7rem;
+    }
+    .page-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .page-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 500;
+      color: var(--green-deep);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .page-sub {
+      font-size: 1rem;
+      color: var(--warm-gray);
+      margin-bottom: 3.5rem;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .contact-box {
+      background: var(--green-deep);
+      color: var(--cream);
+      padding: 2.25rem;
+      border-radius: 4px;
+      margin-bottom: 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .contact-box-text p:first-child {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-light, #E8C9A0);
+      margin-bottom: 0.4rem;
+    }
+    .contact-box-text p:last-child {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--cream);
+    }
+    .contact-btn {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--green-deep);
+      text-decoration: none;
+      padding: 0.75rem 1.75rem;
+      border-radius: 3rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .contact-btn:hover {
+      background: #EDE9E0;
+      transform: translateY(-1px);
+    }
+    .faq-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--green-deep);
+      margin-bottom: 2rem;
+    }
+    .faq {
+      border-top: 1px solid var(--cream-dark);
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 1.5rem 0;
+    }
+    .faq-item summary {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--warm-black);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--green-light);
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-item p {
+      font-size: 0.9rem;
+      color: var(--warm-gray);
+      line-height: 1.8;
+      margin-top: 1rem;
+      max-width: 580px;
+    }
+    .faq-item a {
+      color: var(--green-mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--cream-dark);
+      transition: border-color 0.2s ease;
+    }
+    .faq-item a:hover { border-color: var(--green-mid); }
+    footer {
+      border-top: 1px solid var(--cream-dark);
+      padding: 2.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      color: var(--warm-gray);
+      text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 2rem; }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--warm-gray-light);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover { color: var(--green-deep); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Tend</a>
+    <a href="index.html" class="nav-back">Back to Tend</a>
+  </nav>
+
+  <div class="page">
+    <p class="page-eyebrow">Help</p>
+    <h1 class="page-headline">Support</h1>
+    <p class="page-sub">Questions, feedback, or something not working right — we're here. Tend is built and maintained by a small team that genuinely cares about getting this right.</p>
+
+    <div class="contact-box">
+      <div class="contact-box-text">
+        <p>Get in touch</p>
+        <p>hello@commongenelabs.com</p>
+      </div>
+      <a href="mailto:hello@commongenelabs.com?subject=Tend Support" class="contact-btn">Send an email</a>
+    </div>
+
+    <div class="faq-section">
+      <h2>Common questions</h2>
+      <div class="faq">
+
+        <details class="faq-item">
+          <summary>Is Tend really free?</summary>
+          <p>Yes. Tend is free to download and use. There are no hidden charges, subscriptions, or in-app purchases in the current version.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does Tend require an account?</summary>
+          <p>No. Tend works without any account, login, or email address. You open the app and start using it.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where is my data stored?</summary>
+          <p>Everything you enter in Tend stays on your device. Tend does not operate a cloud server or database. Your recovery schedules and care information are stored locally using Apple's on-device storage and protected by your device's built-in encryption.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What happens when I upload a document?</summary>
+          <p>When you photograph or upload a discharge document, Tend sends it to Anthropic's Claude API for parsing. This is the only moment any data leaves your device. The transmission is encrypted, Anthropic does not use your data to train its models, and no copy of your document is stored on any server. Once parsed, the structured result is returned to your device.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What types of documents can Tend parse?</summary>
+          <p>Tend works best with post-surgical discharge instructions. It handles most standard hospital discharge formats — typed, printed, or photographed. Handwritten notes may produce less accurate results. Support for additional document types including sick visit notes and chronic illness management plans is coming in a future update.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I delete my data?</summary>
+          <p>Because all data is stored on your device, you can delete everything by uninstalling the Tend app. All associated data is permanently removed when the app is deleted.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is Tend available on Android?</summary>
+          <p>Not currently. Tend is available for iPhone and Mac. An Android version is not planned for the immediate future, but if this is important to you, let us know at <a href="mailto:hello@commongenelabs.com">hello@commongenelabs.com</a> — it helps us prioritize.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Something isn't working. What should I do?</summary>
+          <p>Email us at <a href="mailto:hello@commongenelabs.com?subject=Tend Bug Report">hello@commongenelabs.com</a> with a description of what happened and which device and iOS version you're on. We'll get back to you as quickly as we can.</p>
+        </details>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://commongenelabs.com" class="footer-logo">A Common Gene Labs product</a>
+    <div class="footer-links">
+      <a href="index.html">Tend</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:hello@commongenelabs.com">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
