@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consumer Health Data Privacy Policy — Tend: Recovery Care</title>
+  <meta name="description" content="Tend's consumer health data privacy policy under Washington's My Health My Data Act, Nevada SB 370 and similar state laws." />
+  <link rel="canonical" href="https://tendrecovery.app/consumer-health-data.html" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F7F4EE;
+      --cream-dark: #EDE9E0;
+      --green-deep: #1E3A2F;
+      --green-mid: #2D5540;
+      --green-light: #4A7C5F;
+      --warm-black: #1C1814;
+      --warm-gray: #6B6560;
+      --warm-gray-light: #706862; /* 4.5:1 or better on every background */
+      --accent: #C17F4A;
+      --accent-text: #965A2B; /* the accent, dark enough for small text */
+      --white: #FDFBF8;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--warm-black);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.4;
+    }
+
+    nav {
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--green-deep);
+      text-decoration: none;
+    }
+
+    .nav-back {
+      font-size: 0.8rem;
+      color: var(--warm-gray);
+      text-decoration: none;
+      border-bottom: 1px solid var(--warm-gray-light);
+      padding-bottom: 2px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .nav-back:hover {
+      color: var(--green-deep);
+      border-color: var(--green-deep);
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem 7rem;
+    }
+
+    .page-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-text);
+      margin-bottom: 1rem;
+    }
+
+    .page-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 500;
+      color: var(--green-deep);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-updated {
+      font-size: 0.8rem;
+      color: var(--warm-gray-light);
+      margin-bottom: 3.5rem;
+    }
+
+    .summary-box {
+      background: var(--green-deep);
+      color: var(--cream);
+      padding: 2rem 2.25rem;
+      border-radius: 4px;
+      margin-bottom: 3.5rem;
+    }
+
+    .summary-box p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: rgba(247, 244, 238, 0.85);
+    }
+
+    .summary-box strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    .summary-box p + p {
+      margin-top: 0.75rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--green-deep);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .section p {
+      font-size: 0.95rem;
+      color: var(--warm-gray);
+      line-height: 1.8;
+      margin-bottom: 0.9rem;
+    }
+
+    .section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 0.75rem 0 0.9rem;
+    }
+
+    .section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--warm-gray);
+      line-height: 1.7;
+    }
+
+    .section ul li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--green-light);
+      margin-top: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .section a {
+      color: var(--green-mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--cream-dark);
+      transition: border-color 0.2s ease;
+    }
+
+    .section a:hover {
+      border-color: var(--green-mid);
+    }
+
+    .section h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--warm-black);
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .section strong { color: var(--warm-black); font-weight: 500; }
+
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.25rem; }
+
+    .section table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      color: var(--warm-gray);
+      line-height: 1.6;
+    }
+
+    .section th, .section td {
+      text-align: left;
+      vertical-align: top;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .section th {
+      font-weight: 500;
+      color: var(--green-deep);
+      background: var(--white);
+    }
+
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+    footer {
+      border-top: 1px solid var(--cream-dark);
+      padding: 2.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      color: var(--warm-gray);
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--warm-gray-light);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover { color: var(--green-deep); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Tend</a>
+    <a href="index.html" class="nav-back">Back to Tend</a>
+  </nav>
+
+  <main class="page">
+    <p class="page-eyebrow">Legal</p>
+    <h1 class="page-headline">Consumer Health Data Privacy Policy</h1>
+    <p class="page-updated">Last updated: October 2026</p>
+
+    <div class="summary-box">
+      <p>This policy covers "consumer health data" as defined by Washington's My Health My Data Act, Nevada's SB 370 and similar state laws. In Tend, that's almost everything you enter about the person you care for, and your own wellbeing check-ins. It adds to our <a href="privacy.html" style="color: var(--cream);">Privacy Policy</a>, which explains how Tend works in full. Where the two differ, the one that protects you more applies.</p>
+    </div>
+
+    <div class="section">
+      <h2>Categories of consumer health data</h2>
+      <p>Without an account, this information stays on your phone and we don't collect it. If you use AI features, the text described in our Privacy Policy is sent to Anthropic to produce an answer, after names and identifiers are removed. Neither Tend's relay nor our server keeps it.</p>
+      <p>With an account (beta), when you move a care plan to it or join someone's care circle, we store:</p>
+      <ul>
+        <li><span><strong>Health conditions and treatment:</strong> conditions or procedures; care team members by specialty; care instructions, including the text of uploaded documents; medications, doses and schedules; tasks and their completion.</span></li>
+        <li><span><strong>Symptoms and observations:</strong> symptom logs (pain, fatigue, mood, nausea, temperature, notes), wound checks and wound photos.</span></li>
+        <li><span><strong>Caregiver wellbeing:</strong> your own sleep, stress, breaks and notes.</span></li>
+        <li><span><strong>Identifiers that could link to health data:</strong> your email address, display name, circle membership and push notification token.</span></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Why we collect it</h2>
+      <p>Only to provide what you asked for:</p>
+      <ul>
+        <li>keep the care plan on your devices and share it with the people you invite</li>
+        <li>send reminders and keep them accurate across phones</li>
+        <li>run the AI features you turned on</li>
+        <li>keep the service secure, for example by limiting request rates</li>
+      </ul>
+      <p>We don't use it for advertising, for profiling unrelated to care, or to train AI models.</p>
+    </div>
+
+    <div class="section">
+      <h2>Where it comes from</h2>
+      <p>From you, when you enter it or upload a document. From other people in a care circle you belong to, when they enter it. And from the AI features you use, which turn your documents into instructions and tasks for you to review.</p>
+    </div>
+
+    <div class="section">
+      <h2>Who we share it with</h2>
+      <ul>
+        <li><span><strong>People in your care circle</strong>, as you direct, when you invite them. Their access depends on their role.</span></li>
+        <li><span><strong>Service providers</strong> that process it for us, only to run Tend: Supabase (database, sign-in and storage in the United States), Anthropic (AI features, when on), Cloudflare (relay for AI requests without an account), Apple (Sign in with Apple and push delivery; a push carries no health data), and an email delivery provider (sign-in codes; your email address only).</span></li>
+        <li><span><strong>When the law requires it</strong>, for example a valid court order. We'll tell you unless the law forbids it.</span></li>
+      </ul>
+      <p>We have no affiliates that receive consumer health data. <strong>We do not sell consumer health data.</strong></p>
+    </div>
+
+    <div class="section">
+      <h2>Consent</h2>
+      <p>We ask for your consent in the app before we collect or share consumer health data beyond what a feature you asked for needs, and we record what you agreed to and when:</p>
+      <ul>
+        <li>moving a care plan to your account and sharing it with people you invite</li>
+        <li>joining someone else's care circle</li>
+        <li>AI features</li>
+        <li>usage statistics</li>
+      </ul>
+      <p>You can withdraw consent at any time. Turn AI or usage statistics off in Settings. Leave or close a care circle, or delete your account. Withdrawing doesn't affect what was done before.</p>
+    </div>
+
+    <div class="section">
+      <h2>Your rights</h2>
+      <p>You can:</p>
+      <ul>
+        <li>confirm whether we collect, share or sell your consumer health data, and get a list of the third parties it's shared with</li>
+        <li>get a copy of it (in the app, with an account: Settings → Account → Export my data)</li>
+        <li>delete it: delete records, close a circle, or delete your account. Deletion reaches our service providers and, after the backup period in our Privacy Policy, our backups.</li>
+        <li>withdraw consent, as above</li>
+      </ul>
+      <p>Email <a href="mailto:hello@commongenelabs.com?subject=Health%20data%20request">hello@commongenelabs.com</a> with "Health data request" in the subject. We verify the request with your account's email and answer within 45 days. That can be extended once by 45 days when reasonably necessary, and we'll tell you why. If we decline, you can appeal by replying to our decision, and we'll answer within 45 days. If you're still not satisfied, you can contact your state attorney general, for example the <a href="https://www.atg.wa.gov/file-complaint" target="_blank" rel="noopener">Washington State Attorney General</a>.</p>
+      <p>We don't discriminate against you for using these rights.</p>
+    </div>
+
+    <div class="section">
+      <h2>Geofencing</h2>
+      <p>We don't use geofencing or location data.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p><a href="mailto:hello@commongenelabs.com">hello@commongenelabs.com</a> · Common Gene Labs, <a href="https://commongenelabs.com">commongenelabs.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://commongenelabs.com" class="footer-logo">A Common Gene Labs product</a>
+    <div class="footer-links">
+      <a href="index.html">Back to Tend</a>
+      <a href="https://commongenelabs.com/about">About</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:hello@commongenelabs.com">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>

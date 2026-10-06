@@ -1,30 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tend: Recovery Care — Discharge instructions, turned into a plan.</title>
-  <meta name="description" content="Tend turns discharge paperwork into a clear recovery schedule. Free for iPhone and iPad. No account required." />
+  <title>Tend: Recovery Care — Care plans from every doctor, in one schedule</title>
+  <meta name="description" content="Tend turns discharge sheets, clinic letters and medication lists from every doctor into one clear care schedule, with reminders. Free for iPhone and iPad. No account needed." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tendrecovery.app/" />
   <meta property="og:title" content="Tend: Recovery Care" />
-  <meta property="og:description" content="Turns discharge paperwork into a clear recovery schedule. Free for iPhone and iPad. No account required." />
+  <meta property="og:description" content="Care plans from every doctor, in one calm schedule. Free for iPhone and iPad. No account needed." />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Tend: Recovery Care. Care plans from every doctor, in one calm schedule." />
   <meta property="og:image" content="https://tendrecovery.app/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tend: Recovery Care" />
-  <meta name="twitter:description" content="Turns discharge paperwork into a clear recovery schedule. Free for iPhone and iPad. No account required." />
+  <meta name="twitter:description" content="Care plans from every doctor, in one calm schedule. Free for iPhone and iPad. No account needed." />
   <meta name="twitter:image" content="https://tendrecovery.app/og-image.png" />
+  <meta name="apple-itunes-app" content="app-id=6760955362" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://tendrecovery.app/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Tend: Recovery Care",
+    "operatingSystem": "iOS",
+    "applicationCategory": "MedicalApplication",
+    "description": "Turns instructions from every doctor into one clear care schedule, with reminders, a symptom check grounded in your care team's warning signs, and an appointment summary.",
+    "url": "https://tendrecovery.app/",
+    "downloadUrl": "https://apps.apple.com/us/app/tend-recovery-care/id6760955362",
+    "image": "https://tendrecovery.app/app-icon.png",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Common Gene Labs", "url": "https://commongenelabs.com" }
+  }
+  </script>
+
+  <script>document.documentElement.classList.remove('no-js');</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,8 +62,9 @@
       --green-light: #4A7C5F;
       --warm-black: #1C1814;
       --warm-gray: #6B6560;
-      --warm-gray-light: #A89F98;
+      --warm-gray-light: #706862; /* 4.5:1 or better on every background */
       --accent: #C17F4A;
+      --accent-text: #965A2B; /* the accent, dark enough for small text */
       --accent-light: #E8C9A0;
       --white: #FDFBF8;
     }
@@ -136,7 +159,7 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent-text);
       margin-bottom: 1.5rem;
       opacity: 0;
       animation: fadeUp 0.8s ease 0.2s forwards;
@@ -322,7 +345,7 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent-text);
       margin-bottom: 1rem;
     }
 
@@ -456,7 +479,7 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent-text);
       margin-bottom: 1rem;
     }
 
@@ -521,7 +544,7 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent-text);
       margin-bottom: 0.6rem;
     }
 
@@ -618,7 +641,8 @@
 
     .footer-links {
       display: flex;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
     }
 
     .footer-links a {
@@ -649,6 +673,88 @@
       transform: translateY(0);
     }
 
+    /* WHAT'S NEW */
+    .new {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .new-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .new-card {
+      background: var(--white);
+      padding: 1.75rem;
+      border-radius: 4px;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .new-card-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--green-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .new-card-body {
+      font-size: 0.9rem;
+      color: var(--warm-gray);
+      line-height: 1.7;
+    }
+
+    .v2-card a, .story-body a, .disclaimer a {
+      color: var(--green-mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-light);
+    }
+
+    .v2-card a:hover, .story-body a:hover, .disclaimer a:hover { border-color: var(--green-mid); }
+
+    .disclaimer {
+      max-width: 700px;
+      margin: -4rem auto 4rem;
+      padding: 0 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--warm-gray);
+      line-height: 1.7;
+    }
+
+    /* ACCESSIBILITY */
+    .skip-link {
+      position: absolute;
+      left: 1rem;
+      top: -3rem;
+      z-index: 2000;
+      background: var(--green-deep);
+      color: var(--cream);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* Without JavaScript, or with reduced motion, show everything at once. */
+    .no-js .reveal { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .hero-eyebrow, .hero-headline, .hero-sub, .hero-actions, .hero-detail { opacity: 1; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
     /* RESPONSIVE */
     @media (max-width: 600px) {
       .hero-actions { flex-direction: column; align-items: flex-start; }
@@ -658,20 +764,24 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <!-- NAV -->
   <nav id="nav">
     <a href="/" class="nav-logo">Tend</a>
     <a href="https://apps.apple.com/us/app/tend-recovery-care/id6760955362" class="nav-cta">Download Free</a>
   </nav>
 
+  <main id="main">
+
   <!-- HERO -->
   <section class="hero">
-    <p class="hero-eyebrow">Recovery Care for iPhone &amp; iPad</p>
+    <p class="hero-eyebrow">Care plans for iPhone &amp; iPad</p>
     <h1 class="hero-headline">You shouldn't have to hold <em>all of this</em> in your head.</h1>
-    <p class="hero-sub">Tend turns discharge paperwork into a clear recovery schedule — medications, wound care, follow-ups, and more — so nothing gets missed when it matters most.</p>
+    <p class="hero-sub">Tend turns the paperwork from every doctor — discharge sheets, clinic letters, medication lists — into one clear schedule with reminders, so nothing gets missed when it matters most.</p>
     <div class="hero-actions">
-      <a href="#download" class="btn-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18.5 5 12l7-6.5M19 12H5"/></svg>
+      <a href="https://apps.apple.com/us/app/tend-recovery-care/id6760955362" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M6 11l6 6 6-6M5 21h14"/></svg>
         Download on the App Store
       </a>
       <a href="#how-it-works" class="btn-ghost">See how it works</a>
@@ -700,9 +810,9 @@
   <section class="problem">
     <div class="problem-inner">
       <p class="problem-label">The problem</p>
-      <h2 class="problem-headline reveal">Discharge instructions are written for clinicians. Recovery happens at home.</h2>
+      <h2 class="problem-headline reveal">Instructions are written for clinicians. Care happens at home.</h2>
       <div class="problem-body reveal">
-        <p>When someone you love comes home from surgery, they hand you a stack of papers. Pages of instructions — <strong>medications with different schedules, wound care protocols, activity restrictions, follow-up appointments.</strong> All of it important. None of it organized.</p>
+        <p>When someone you love comes home from surgery, or lives with a long-term condition, the instructions arrive in pieces. A discharge sheet from the surgeon. A letter from the cardiologist. A medication list from the family doctor. <strong>Different schedules, overlapping medications, warning signs scattered across pages.</strong> All of it important. None of it in one place.</p>
         <p>You're exhausted. You're scared. And you're supposed to hold all of it together.</p>
         <p>Tend was built for that moment — by a caregiver who lived it.</p>
       </div>
@@ -716,18 +826,50 @@
     <div class="steps">
       <div class="step reveal">
         <div class="step-number">01</div>
-        <div class="step-title">Photograph or upload the paperwork</div>
-        <p class="step-body">Take a photo of the discharge documents or upload a PDF. Tend accepts the messy, real-world versions hospitals actually send home.</p>
+        <div class="step-title">Add the paperwork</div>
+        <p class="step-body">Upload a discharge sheet, clinic letter or medication list as a PDF or text file, or paste it in. Add more as new doctors weigh in.</p>
       </div>
       <div class="step reveal">
         <div class="step-number">02</div>
-        <div class="step-title">Tend parses it with AI</div>
-        <p class="step-body">Tend reads through the instructions and pulls out what matters — medications, schedules, wound care, restrictions, follow-ups — and structures it clearly.</p>
+        <div class="step-title">Review what Tend found</div>
+        <p class="step-body">Tend pulls out medications, wound care, exercises and warning signs, and shows the exact line each came from. If something conflicts with another doctor's instructions, you decide. Nothing changes until you approve it.</p>
       </div>
       <div class="step reveal">
         <div class="step-number">03</div>
         <div class="step-title">Follow the schedule with confidence</div>
-        <p class="step-body">Everything in one place, organized and readable. No more cross-referencing pages at midnight to make sure you haven't missed something important.</p>
+        <p class="step-body">Reminders for every dose, a symptom check grounded in your care team's warning signs, and a summary to take to the next appointment. No more cross-referencing pages at midnight.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S NEW -->
+  <section class="new" id="whats-new">
+    <p class="section-label reveal">New in Tend 1.1</p>
+    <h2 class="section-headline reveal">More than one doctor. More than one kind of care.</h2>
+    <div class="new-grid">
+      <div class="new-card reveal">
+        <p class="new-card-title">Instructions from every doctor</p>
+        <p class="new-card-body">Surgeon, specialist, family doctor: each document goes into the same schedule, labeled with where it came from.</p>
+      </div>
+      <div class="new-card reveal">
+        <p class="new-card-title">Conflicts flagged, never merged</p>
+        <p class="new-card-body">A changed dose, a duplicate, or a "stop taking" is shown side by side for you to decide. A tenfold dose change gets a warning, because it's usually a typo.</p>
+      </div>
+      <div class="new-card reveal">
+        <p class="new-card-title">Reminders you can count on</p>
+        <p class="new-card-body">Every dose gets a reminder inside the hours you choose. Mark it taken or skipped right from the notification.</p>
+      </div>
+      <div class="new-card reveal">
+        <p class="new-card-title">A symptom check in your doctors' words</p>
+        <p class="new-card-body">Entries are compared with the warning signs your care team wrote down and with the last two weeks. You get a plain answer, never "normal".</p>
+      </div>
+      <div class="new-card reveal">
+        <p class="new-card-title">Appointment summary</p>
+        <p class="new-card-body">One tap builds a PDF on your phone: medications and their sources, doses taken and missed, symptoms, and your questions for the visit.</p>
+      </div>
+      <div class="new-card reveal">
+        <p class="new-card-title">Ongoing conditions and self-care</p>
+        <p class="new-card-body">Not just surgery recovery: heart failure, diabetes and other long-term conditions, whether you're caring for someone else or yourself.</p>
       </div>
     </div>
   </section>
@@ -738,13 +880,13 @@
       <div class="reveal">
         <div class="section-rule"></div>
         <h2 class="privacy-headline">Health information deserves to be treated with care.</h2>
-        <p class="privacy-body">Tend is built privacy-first — not as a feature, but as a foundation. Your family's health information belongs to you.</p>
+        <p class="privacy-body">Tend is built privacy-first — not as a feature, but as a foundation. Your family's health information belongs to you. <a href="privacy.html" style="color: var(--green-mid);">Read exactly where it goes.</a></p>
       </div>
       <ul class="privacy-facts reveal">
-        <li>All data is stored on your device — never uploaded to a cloud server or shared with third parties.</li>
-        <li>No account, login, or email required. Ever.</li>
-        <li>AI document parsing is processed securely and never used to train models.</li>
-        <li>You can delete everything at any time, completely.</li>
+        <li>Your care plan is stored on your phone. No account, and no copy on our servers.</li>
+        <li>AI is optional. When it's on, only the text a feature needs goes to Anthropic's Claude, after names and identifiers are removed. It's never used to train models. Photos are never sent.</li>
+        <li>No ads, no selling data. Usage statistics are off unless you turn them on.</li>
+        <li>Delete anything in the app, or delete the app to remove everything.</li>
       </ul>
     </div>
   </section>
@@ -759,6 +901,7 @@
       <p>At the beginning of 2026, Eugene Aiken found himself supporting three family members through major surgeries at the same time. As a data engineer with ADHD, the cognitive load of managing complex care instructions across three recoveries simultaneously wasn't just stressful — <strong>missing something had real consequences.</strong></p>
       <p>He looked for an app that could help organize it all. It didn't exist. So he taught himself Swift and built one.</p>
       <p>Tend is the tool he needed then. It's free because every caregiver deserves access to it — regardless of their resources, their technical ability, or how many hard days they've already had.</p>
+      <p><a href="https://medium.com/@elaiken3/i-built-an-ai-caregiver-app-because-2026-broke-me-in-the-best-possible-way-e938d1c3196c" target="_blank" rel="noopener">Read the full story on Medium</a></p>
       <p class="story-attribution">Eugene Aiken — Founder, Common Gene Labs</p>
     </div>
   </section>
@@ -766,24 +909,24 @@
   <!-- V2 TEASER -->
   <section class="v2">
     <div class="v2-inner">
-      <p class="section-label reveal">Coming in V2</p>
-      <h2 class="section-headline reveal" style="margin-bottom: 0.5rem;">Recovery care is just the beginning.</h2>
-      <p class="story-body reveal" style="max-width: 540px;">Tend is expanding to support more of the moments when people need clear, organized care instructions most.</p>
+      <p class="section-label reveal">Coming next</p>
+      <h2 class="section-headline reveal" style="margin-bottom: 0.5rem;">Care is rarely one person's job.</h2>
+      <p class="story-body reveal" style="max-width: 540px;">The next step is helping everyone who cares for someone work from the same plan.</p>
       <div class="v2-grid">
         <div class="v2-card reveal">
-          <p class="v2-card-label">Coming soon</p>
-          <p class="v2-card-title">Patient mode</p>
-          <p class="v2-card-body">Managing your own recovery, not someone else's. The interface shifts to speak directly to you.</p>
+          <p class="v2-card-label">In beta</p>
+          <p class="v2-card-title">Share care with your family</p>
+          <p class="v2-card-body">Invite the people who help. A dose given on one phone shows as done on everyone's, and reminders clear. Accounts stay optional, and the person receiving care stays in charge. <a href="mailto:hello@commongenelabs.com?subject=Tend%20beta">Ask to join the beta.</a></p>
         </div>
         <div class="v2-card reveal">
-          <p class="v2-card-label">Coming soon</p>
-          <p class="v2-card-title">Expanded parsing</p>
-          <p class="v2-card-body">Sick visit notes, chronic illness management, pediatric care. Wherever a doctor hands someone a piece of paper.</p>
+          <p class="v2-card-label">Planned</p>
+          <p class="v2-card-title">A web app</p>
+          <p class="v2-card-body">For the caregivers in a circle who don't have an iPhone. Android comes after that.</p>
         </div>
         <div class="v2-card reveal">
-          <p class="v2-card-label">Coming soon</p>
-          <p class="v2-card-title">Care team sharing</p>
-          <p class="v2-card-body">Recovery is rarely solo. Share schedules with family members and caregivers so everyone works from the same information.</p>
+          <p class="v2-card-label">Planned</p>
+          <p class="v2-card-title">Coordination</p>
+          <p class="v2-card-body">Assigning tasks, seeing who's on today, handoff notes between shifts, and a heads-up when a dose is missed.</p>
         </div>
       </div>
     </div>
@@ -799,26 +942,35 @@
     <p class="cta-note reveal">Free. iPhone &amp; iPad. No account. No ads.</p>
   </section>
 
+  <p class="disclaimer">Tend helps you organize care. It does not replace medical advice. Always follow your care team's instructions, contact them with questions, and call your local emergency number in an emergency.</p>
+
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <a href="https://commongenelabs.com" class="footer-logo">A Common Gene Labs product</a>
     <div class="footer-links">
       <a href="https://commongenelabs.com/about">About</a>
-      <a href="/cdn-cgi/l/email-protection#630b060f0f0c23000c0e0e0c0d04060d060f0201104d000c0e">Contact</a>
+      <a href="mailto:hello@commongenelabs.com">Contact</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
+      <a href="consumer-health-data.html">Consumer health data</a>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
+
     // Sticky nav
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Scroll reveal
+    // Scroll reveal (everything is shown at once when motion is reduced)
     const reveals = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      reveals.forEach(el => el.classList.add('visible'));
+    }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

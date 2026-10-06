@@ -7,6 +7,7 @@
   <meta name="description" content="Get help with Tend: Recovery Care. Contact support or find answers to common questions." />
   <link rel="canonical" href="https://tendrecovery.app/support.html" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -20,8 +21,9 @@
       --green-light: #4A7C5F;
       --warm-black: #1C1814;
       --warm-gray: #6B6560;
-      --warm-gray-light: #A89F98;
+      --warm-gray-light: #706862; /* 4.5:1 or better on every background */
       --accent: #C17F4A;
+      --accent-text: #965A2B; /* the accent, dark enough for small text */
       --white: #FDFBF8;
     }
     body {
@@ -73,7 +75,7 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent-text);
       margin-bottom: 1rem;
     }
     .page-headline {
@@ -111,9 +113,12 @@
       color: var(--accent-light, #E8C9A0);
       margin-bottom: 0.4rem;
     }
+    .contact-box-text { min-width: 0; }
+    @media (max-width: 480px) { .contact-box { padding: 1.5rem; } }
     .contact-box-text p:last-child {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
+      font-size: clamp(1.1rem, 4.6vw, 1.5rem);
+      overflow-wrap: break-word;
       font-weight: 500;
       color: var(--cream);
     }
@@ -201,7 +206,8 @@
       color: var(--warm-gray);
       text-decoration: none;
     }
-    .footer-links { display: flex; gap: 2rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     .footer-links a {
       font-size: 0.8rem;
       color: var(--warm-gray-light);
@@ -218,7 +224,7 @@
     <a href="index.html" class="nav-back">Back to Tend</a>
   </nav>
 
-  <div class="page">
+  <main class="page">
     <p class="page-eyebrow">Help</p>
     <h1 class="page-headline">Support</h1>
     <p class="page-sub">Questions, feedback, or something not working right — we're here. Tend is built and maintained by a small team that genuinely cares about getting this right.</p>
@@ -226,7 +232,7 @@
     <div class="contact-box">
       <div class="contact-box-text">
         <p>Get in touch</p>
-        <p>hello@commongenelabs.com</p>
+        <p>hello@<wbr>commongenelabs.com</p>
       </div>
       <a href="mailto:hello@commongenelabs.com?subject=Tend Support" class="contact-btn">Send an email</a>
     </div>
@@ -237,53 +243,76 @@
 
         <details class="faq-item">
           <summary>Is Tend really free?</summary>
-          <p>Yes. Tend is free to download and use. There are no hidden charges, subscriptions, or in-app purchases in the current version.</p>
+          <p>Yes. Tend is free to download and use, with no ads, subscriptions or in-app purchases.</p>
         </details>
 
         <details class="faq-item">
           <summary>Does Tend require an account?</summary>
-          <p>No. Tend works without any account, login, or email address. You open the app and start using it.</p>
+          <p>No. Tend works without an account, login or email address: open the app and start. Accounts are only for sharing care with family or using Tend on more than one device, and they're in a TestFlight beta right now (see below).</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What kinds of documents can Tend read?</summary>
+          <p>Discharge instructions, clinic letters and medication lists from any doctor, for a surgery recovery or a long-term condition. Upload a PDF or a text file, or paste the text in. Add more documents as new doctors weigh in.</p>
+          <p>Tend can't read scans or photos of pages yet. If a PDF is a scan, Tend will tell you. Type or paste the instructions instead, or ask the care team for a digital copy, often available in the patient portal.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if two doctors' instructions disagree?</summary>
+          <p>Tend never merges them on its own. When a new document changes a dose you already have, repeats a medication, or says to stop one, the review screen shows both and asks you to replace, add alongside, or skip. It warns you when a dose changes tenfold or more, which is usually a typo. When in doubt, ask the care team.</p>
         </details>
 
         <details class="faq-item">
           <summary>Where is my data stored?</summary>
-          <p>Everything you enter in Tend stays on your device. Tend does not operate a cloud server or database. Your recovery schedules and care information are stored locally using Apple's on-device storage and protected by your device's built-in encryption.</p>
+          <p>Without an account, everything you enter stays on your phone, protected by Apple's on-device storage and encryption, and we have no copy. With a beta account, a care plan you choose to share is also stored on Tend's server in the United States, visible only to the people in your care circle. Full details are in our <a href="privacy.html">privacy policy</a>.</p>
         </details>
 
         <details class="faq-item">
-          <summary>What happens when I upload a document?</summary>
-          <p>When you photograph or upload a discharge document, Tend sends it to Anthropic's Claude API for parsing. This is the only moment any data leaves your device. The transmission is encrypted, Anthropic does not use your data to train its models, and no copy of your document is stored on any server. Once parsed, the structured result is returned to your device.</p>
+          <summary>What does the AI do, and can I turn it off?</summary>
+          <p>AI features read uploaded documents into a care plan for you to review, write the morning briefing and caregiver tips, and check symptom entries against your care team's warning signs. They're optional: turn them off any time in Settings, and the rest of Tend keeps working.</p>
+          <p>When AI is on, only the text a feature needs is sent to Anthropic's Claude, after names and identifiers are removed. Anthropic doesn't use it to train models. Photos are never sent.</p>
         </details>
 
         <details class="faq-item">
-          <summary>What types of documents can Tend parse?</summary>
-          <p>Tend works best with post-surgical discharge instructions. It handles most standard hospital discharge formats — typed, printed, or photographed. Handwritten notes may produce less accurate results. Support for additional document types including sick visit notes and chronic illness management plans is coming in a future update.</p>
+          <summary>Does the symptom check diagnose anything?</summary>
+          <p>No. It compares an entry with the warning signs your care team wrote down and with the last two weeks of entries, and tells you plainly whether something matched. It never says everything is "normal". If you're worried, contact the care team, or call your local emergency number in an emergency.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does Tend work with Apple Health or wearables?</summary>
+          <p>Not yet. Symptoms are entered by hand: pain, fatigue, mood, nausea, temperature and notes. If we add Apple Health, it will be optional and stay on your phone.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I share care with my family?</summary>
+          <p>Shared care circles are in a TestFlight beta. Everyone in a circle sees the same plan, a dose given on one phone shows as done on everyone's, and the person receiving care stays in charge. To join the beta, email <a href="mailto:hello@commongenelabs.com?subject=Tend%20beta">hello@commongenelabs.com</a> with "Tend beta" in the subject.</p>
         </details>
 
         <details class="faq-item">
           <summary>How do I delete my data?</summary>
-          <p>Because all data is stored on your device, you can delete everything by uninstalling the Tend app. All associated data is permanently removed when the app is deleted.</p>
+          <p>Delete any record in the app, or delete the app to remove everything on your phone. With a beta account, you can also delete your account in Settings → Account, which removes it from our server.</p>
         </details>
 
         <details class="faq-item">
-          <summary>Is Tend available on Android?</summary>
-          <p>Not currently. Tend is available for iPhone and iPad. An Android version is not planned for the immediate future, but if this is important to you, let us know at <a href="mailto:hello@commongenelabs.com">hello@commongenelabs.com</a> — it helps us prioritize.</p>
+          <summary>Is Tend available on Android or the web?</summary>
+          <p>Not yet. A web app is next, so caregivers in a shared circle can take part without an iPhone, and Android comes after that. If this matters to you, tell us at <a href="mailto:hello@commongenelabs.com">hello@commongenelabs.com</a>: it helps us prioritize.</p>
         </details>
 
         <details class="faq-item">
           <summary>Something isn't working. What should I do?</summary>
-          <p>Email us at <a href="mailto:hello@commongenelabs.com?subject=Tend Bug Report">hello@commongenelabs.com</a> with a description of what happened and which device and iOS version you're on. We'll get back to you as quickly as we can.</p>
+          <p>Email <a href="mailto:hello@commongenelabs.com?subject=Tend%20bug%20report">hello@commongenelabs.com</a> with what happened, a screenshot if you can, your iPhone model and iOS version, and Tend's version (Settings → About). We'll get back to you as quickly as we can.</p>
         </details>
 
       </div>
     </div>
-  </div>
+  </main>
 
   <footer>
     <a href="https://commongenelabs.com" class="footer-logo">A Common Gene Labs product</a>
     <div class="footer-links">
       <a href="index.html">Tend</a>
       <a href="privacy.html">Privacy</a>
+      <a href="consumer-health-data.html">Consumer health data</a>
       <a href="mailto:hello@commongenelabs.com">Contact</a>
     </div>
   </footer>
