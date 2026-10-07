@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Tend: Recovery Care</title>
-  <meta name="description" content="How Tend handles health information: what stays on your phone, what AI features send, accounts in beta, and your choices." />
+  <meta name="description" content="How Tend handles health information: what stays on your phone, what AI features send, and your choices." />
   <link rel="canonical" href="https://tendrecovery.app/privacy.html" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -270,13 +270,13 @@
     <p class="page-updated">Last updated: October 2026 · applies from Tend 1.1</p>
 
     <div class="summary-box">
-      <p><strong>The short version:</strong> Without an account, everything you enter in Tend stays on your phone, and we have no copy. AI features are optional. When they're on, only the text a feature needs is sent to Anthropic's Claude, after names and identifiers are removed, and photos are never sent. We don't sell your data, show ads, or track you. Accounts, for sharing care with family, are optional and in a TestFlight beta.</p>
+      <p><strong>The short version:</strong> Everything you enter in Tend stays on your phone. There's no account, and we have no copy. AI features are optional. When they're on, only the text a feature needs is sent to Anthropic's Claude, after names and identifiers are removed, and photos are never sent. We don't sell your data, show ads, or track you.</p>
       <p>We built Tend for caregivers on hard days. This page says exactly where your family's health information goes. US residents should also read our <a href="consumer-health-data.html" style="color: var(--cream);">Consumer Health Data Privacy Policy</a>.</p>
     </div>
 
     <div class="section">
-      <h2>Using Tend without an account</h2>
-      <p>This is how everyone using Tend from the App Store uses it today. Everything you enter is stored only on your phone, using Apple's on-device storage and its encryption:</p>
+      <h2>What stays on your phone</h2>
+      <p>Everything you enter is stored only on your phone, using Apple's on-device storage and its encryption:</p>
       <ul>
         <li>the care profile and conditions</li>
         <li>medications, schedules and reminders</li>
@@ -285,7 +285,7 @@
         <li>your own wellbeing check-ins</li>
       </ul>
       <p>Tend keeps backup copies on the phone so an app update can't lose your data. Your phone's own iCloud or computer backup may include Tend's data like any other app's, under Apple's privacy policy.</p>
-      <p>Deleting the app deletes all of it. We can't recover it, because we never had it.</p>
+      <p>There's no Tend account and no Tend server holding your care plan. Deleting the app deletes all of it. We can't recover it, because we never had it.</p>
     </div>
 
     <div class="section">
@@ -311,33 +311,8 @@
         <li>street addresses and UK postcodes</li>
       </ul>
       <p>Care team members are described by specialty. Redaction is automatic and can't catch everything printed on a page, so leave out pages you don't want analyzed. Wound photos are never sent.</p>
-      <p><strong>How it travels.</strong> Without an account, requests pass through a small relay we run on Cloudflare, which only forwards them to Anthropic. With an account (beta), they go through our server instead, which first checks that AI is allowed for you and your care circle. Neither stores or logs what you send.</p>
+      <p><strong>How it travels.</strong> Requests pass through a small relay we run on Cloudflare, which only forwards them to Anthropic and doesn't store or log what you send.</p>
       <p>Anthropic processes the text to produce the answer under its <a href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">commercial terms</a>. It doesn't use it to train models, and it keeps it only for a limited period. See <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a>.</p>
-    </div>
-
-    <div class="section">
-      <h2>Accounts and shared care circles (beta)</h2>
-      <p>Accounts are in a TestFlight beta and aren't part of the App Store version yet. They're optional, and only needed to share care with other people or to use Tend on more than one device. Signing in sends nothing about the person you care for. Moving a care plan to an account is a separate step that asks for your agreement first.</p>
-      <h3>What we store with an account</h3>
-      <ul>
-        <li><span><strong>To sign you in:</strong> your email address, or the private relay address Sign in with Apple provides, and an account ID.</span></li>
-        <li><span><strong>So your circle knows who did what:</strong> the name you choose to show.</span></li>
-        <li><span><strong>Care plans you move to your account:</strong> the same information listed above, including wound photos. They're visible only to the people in that care circle.</span></li>
-        <li><span><strong>Circle details:</strong> who is in each circle, their roles, invites (stored only as a scrambled code), and an activity log of who joined and who recorded a dose.</span></li>
-        <li><span><strong>Your wellbeing check-ins:</strong> visible only to you, never to the circle or its admins.</span></li>
-        <li><span><strong>Consent records:</strong> what you agreed to, which version of the wording, and when.</span></li>
-        <li><span><strong>To run the service:</strong> your phone's push notification token, used to tell your circle's phones that something changed (the notification carries no health information), and the times of AI and push requests, kept for two days to prevent abuse.</span></li>
-      </ul>
-      <h3>Where it's stored</h3>
-      <p>On servers run by Supabase in the United States, encrypted in transit and at rest. It is <strong>not end-to-end encrypted</strong>: our server can read it, which it needs to do to sync and apply the access rules. We access it only to run and fix the service and to answer your requests.</p>
-      <h3>Who can see a shared care plan</h3>
-      <p>Access is enforced by our database on every request, not just by the app.</p>
-      <ul>
-        <li><span><strong>Viewers</strong> see the care plan and its records.</span></li>
-        <li><span><strong>Caregivers</strong> can also record doses and tasks, add logs and edit the plan.</span></li>
-        <li><span><strong>Admins</strong> can also invite and remove people, change settings, and export the circle.</span></li>
-        <li><span><strong>The person receiving care</strong>, once they join, can see everyone, remove anyone including admins, export everything and close the circle. Nobody can take those rights away.</span></li>
-      </ul>
     </div>
 
     <div class="section">
@@ -348,26 +323,17 @@
           <thead><tr><th>Provider</th><th>What for</th><th>What they receive</th></tr></thead>
           <tbody>
             <tr><td>Anthropic</td><td>AI features, when on</td><td>The text described under AI features</td></tr>
-            <tr><td>Cloudflare</td><td>Relay for AI requests without an account</td><td>The same text, in transit only</td></tr>
+            <tr><td>Cloudflare</td><td>Relay for AI requests</td><td>The same text, in transit only</td></tr>
             <tr><td>TelemetryDeck</td><td>Anonymous usage statistics, <strong>only if you turn them on</strong></td><td>Counts of features used and errors. Never names, notes, symptoms, medications, documents or anything you type.</td></tr>
-            <tr><td>Supabase</td><td>Accounts (beta): database, sign-in, storage</td><td>Everything stored with an account</td></tr>
-            <tr><td>Apple</td><td>Sign in with Apple and push notifications (beta)</td><td>Sign-in details; a push token and notifications with no health information</td></tr>
-            <tr><td>An email delivery provider</td><td>Sign-in codes (beta)</td><td>Your email address</td></tr>
           </tbody>
         </table>
       </div>
-      <p>We don't sell personal data, share it for advertising, or use it to track you across apps or websites. We'll disclose information only if the law requires it, and we'll tell you first unless the law forbids that.</p>
+      <p>We don't sell personal data, share it for advertising, or use it to track you across apps or websites.</p>
     </div>
 
     <div class="section">
       <h2>How long we keep it</h2>
-      <ul>
-        <li><span><strong>On your phone:</strong> until you delete it or delete the app.</span></li>
-        <li><span><strong>With an account:</strong> until you delete your account. Deleting it erases your account, name, consents and check-ins at once.</span></li>
-        <li><span><strong>Deleted records:</strong> they disappear from everyone's app at the next sync, and are erased from the server when the circle is closed.</span></li>
-        <li><span><strong>Closing a circle:</strong> erases its records at once and its photos within a day.</span></li>
-        <li><span><strong>Backups:</strong> our hosting provider keeps backups for disaster recovery, which may hold deleted data for up to 30 days.</span></li>
-      </ul>
+      <p>Your care plan stays on your phone until you delete it or delete the app. We don't keep it at all. Anthropic keeps AI requests only for the limited period its terms describe.</p>
     </div>
 
     <div class="section">
@@ -375,28 +341,27 @@
       <p>In the app you can:</p>
       <ul>
         <li><span><strong>Correct</strong> anything by editing it.</span></li>
-        <li><span><strong>Delete</strong> any record.</span></li>
-        <li><span><strong>Export</strong> an appointment summary. With an account, you can also export your data, and admins or the person receiving care can export the circle.</span></li>
-        <li><span><strong>Turn off</strong> AI or usage statistics.</span></li>
-        <li><span>With an account, <strong>leave or close</strong> a circle, or <strong>delete</strong> your account.</span></li>
+        <li><span><strong>Delete</strong> any record, or delete the app to remove everything.</span></li>
+        <li><span><strong>Export</strong> an appointment summary as a PDF or text.</span></li>
+        <li><span><strong>Turn off</strong> AI or usage statistics in Settings.</span></li>
       </ul>
-      <p>Depending on where you live, you may also have the right to know what we hold, to get a copy, to correct or delete it, and to appeal if we refuse a request. Email <a href="mailto:hello@commongenelabs.com?subject=Privacy%20request">hello@commongenelabs.com</a> with "Privacy request" in the subject. We'll answer within 45 days. If we refuse, reply to appeal and we'll respond within 45 days.</p>
-      <p>If you're in the EU or UK, we rely on your explicit consent to process health information, given in the app and withdrawable at any time. You can also complain to your data protection authority.</p>
+      <p>Depending on where you live, you may also have the right to know what we hold, to get a copy, to correct or delete it, and to appeal if we refuse a request. Because your care plan stays on your phone, we usually hold nothing about you. Email <a href="mailto:hello@commongenelabs.com?subject=Privacy%20request">hello@commongenelabs.com</a> with "Privacy request" in the subject and we'll answer within 45 days. If we refuse, reply to appeal and we'll respond within 45 days.</p>
+      <p>If you're in the EU or UK, AI processing relies on your explicit consent, which you give by turning AI on and withdraw by turning it off. You can also complain to your data protection authority.</p>
     </div>
 
     <div class="section">
       <h2>Children</h2>
-      <p>Tend is for adults organizing care. A parent or guardian may keep a care plan for their child. Children under 13 must not create accounts, and we don't knowingly collect information from them.</p>
+      <p>Tend is for adults organizing care. A parent or guardian may keep a care plan for their child. Tend is not directed at children under 13, and we don't knowingly collect information from them.</p>
     </div>
 
     <div class="section">
       <h2>Security</h2>
-      <p>All traffic is encrypted. On the phone, data is protected by iOS data protection, and wound photos are locked until the phone is unlocked. With an account, our database applies access rules to every request, and our server keys never ship in the app. No system is perfectly secure. If a breach affects your information, we'll tell you and the authorities as the law requires.</p>
+      <p>All traffic is encrypted. On the phone, data is protected by iOS data protection, and wound photos are locked until the phone is unlocked. Our AI key never ships in the app.</p>
     </div>
 
     <div class="section">
       <h2>Changes to this policy</h2>
-      <p>We'll update this page when our practices change and change the date at the top. If a change affects how we use information you've already given us, we'll ask again in the app before it applies to you.</p>
+      <p>We'll update this page when our practices change and change the date at the top. Before Tend offers accounts or sharing, we'll update this policy and ask for your agreement in the app before anything leaves your phone.</p>
     </div>
 
     <div class="section">
