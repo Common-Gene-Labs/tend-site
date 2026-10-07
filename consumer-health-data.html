@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — Tend: Recovery Care</title>
-  <meta name="description" content="How Tend handles health information: what stays on your phone, what AI features send, and your choices." />
-  <link rel="canonical" href="https://tendrecovery.app/privacy.html" />
+  <title>Consumer Health Data Privacy Policy — Tend: Recovery Care</title>
+  <meta name="description" content="Tend's consumer health data privacy policy under Washington's My Health My Data Act, Nevada SB 370 and similar state laws." />
+  <link rel="canonical" href="https://tendrecovery.app/consumer-health-data.html" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231E3A2F'/><text x='16' y='23' font-family='serif' font-size='20' font-weight='600' fill='%23F7F4EE' text-anchor='middle'>T</text></svg>" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -266,107 +266,58 @@
 
   <main class="page">
     <p class="page-eyebrow">Legal</p>
-    <h1 class="page-headline">Privacy Policy</h1>
-    <p class="page-updated">Last updated: October 2026 · applies from Tend 1.1</p>
+    <h1 class="page-headline">Consumer Health Data Privacy Policy</h1>
+    <p class="page-updated">Last updated: October 2026</p>
 
     <div class="summary-box">
-      <p><strong>The short version:</strong> Everything you enter in Tend stays on your phone. There's no account, and we have no copy. AI features are optional. When they're on, only the text a feature needs is sent to Anthropic's Claude, after names and identifiers are removed, and photos are never sent. We don't sell your data, show ads, or track you.</p>
-      <p>We built Tend for caregivers on hard days. This page says exactly where your family's health information goes. US residents should also read our <a href="consumer-health-data.html" style="color: var(--cream);">Consumer Health Data Privacy Policy</a>.</p>
+      <p>This policy covers "consumer health data" as defined by Washington's My Health My Data Act, Nevada's SB 370 and similar state laws. In Tend, that's almost everything you enter about the person you care for, and your own wellbeing check-ins. It adds to our <a href="privacy.html" style="color: var(--cream);">Privacy Policy</a>. Where the two differ, the one that protects you more applies.</p>
     </div>
 
     <div class="section">
-      <h2>What stays on your phone</h2>
-      <p>Everything you enter is stored only on your phone, using Apple's on-device storage and its encryption:</p>
+      <h2>What we collect</h2>
+      <p><strong>We don't collect or store consumer health data on our servers.</strong> Everything you enter stays on your phone. There's no account.</p>
+      <p>The one exception is the AI features, which are optional. When they're on, the text a feature needs is sent to Anthropic to produce an answer, after names and identifiers are removed. That text can include:</p>
       <ul>
-        <li>the care profile and conditions</li>
-        <li>medications, schedules and reminders</li>
-        <li>instructions, including the text of documents you upload</li>
-        <li>symptom logs, wound checks and wound photos</li>
-        <li>your own wellbeing check-ins</li>
+        <li><span><strong>Health conditions and treatment:</strong> conditions or procedures, care instructions including the text of uploaded documents, and medications.</span></li>
+        <li><span><strong>Symptoms:</strong> today's symptom entry and notes, and a numeric summary of the last two weeks.</span></li>
       </ul>
-      <p>Tend keeps backup copies on the phone so an app update can't lose your data. Your phone's own iCloud or computer backup may include Tend's data like any other app's, under Apple's privacy policy.</p>
-      <p>There's no Tend account and no Tend server holding your care plan. Deleting the app deletes all of it. We can't recover it, because we never had it.</p>
+      <p>Our relay passes it through without keeping it. Wound photos and caregiver check-ins are never sent.</p>
     </div>
 
     <div class="section">
-      <h2>AI features</h2>
-      <p>AI features read uploaded documents into a care plan, write the morning briefing and caregiver tips, and check symptom entries against your care team's warning signs. They're optional: you choose during setup, and you can turn them off any time in Settings. With AI off, nothing is sent anywhere. Schedules, reminders, logs, the medication list and the appointment summary keep working.</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Feature</th><th>What is sent</th></tr></thead>
-          <tbody>
-            <tr><td>Reading instructions</td><td>The document's text</td></tr>
-            <tr><td>Daily briefing</td><td>Conditions or procedure, day count, number of tasks today, and summaries of active instructions</td></tr>
-            <tr><td>Symptom check</td><td>Today's entry including your notes, a numeric summary of the last 14 days, the care team's warning signs, and instruction summaries</td></tr>
-            <tr><td>Caregiver tips</td><td>Conditions or procedure, day count, instruction summaries and warning signs</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p><strong>Before anything is sent, Tend removes identifiers it can recognize:</strong></p>
+      <h2>Why it's sent</h2>
+      <p>Only to provide the AI feature you asked for: reading a document into your care plan, the morning briefing, caregiver tips, or a symptom check. It's never used for advertising, for profiling, or to train AI models.</p>
+    </div>
+
+    <div class="section">
+      <h2>Who receives it</h2>
       <ul>
-        <li>the name of the person you care for</li>
-        <li>email addresses and phone numbers</li>
-        <li>labeled record numbers, such as MRN, NHS, Medicare, patient and insurance IDs</li>
-        <li>Social Security numbers and labeled dates of birth</li>
-        <li>street addresses and UK postcodes</li>
+        <li><span><strong>Anthropic</strong>, which processes it to produce the answer under its commercial terms.</span></li>
+        <li><span><strong>Cloudflare</strong>, which runs the relay the request passes through, in transit only.</span></li>
       </ul>
-      <p>Care team members are described by specialty. Redaction is automatic and can't catch everything printed on a page, so leave out pages you don't want analyzed. Wound photos are never sent.</p>
-      <p><strong>How it travels.</strong> Requests pass through a small relay we run on Cloudflare, which only forwards them to Anthropic and doesn't store or log what you send.</p>
-      <p>Anthropic processes the text to produce the answer under its <a href="https://www.anthropic.com/legal/commercial-terms" target="_blank" rel="noopener">commercial terms</a>. It doesn't use it to train models, and it keeps it only for a limited period. See <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a>.</p>
+      <p>We have no affiliates that receive consumer health data. <strong>We do not sell consumer health data.</strong></p>
     </div>
 
     <div class="section">
-      <h2>Who else handles your data</h2>
-      <p>We use these providers only to run Tend:</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Provider</th><th>What for</th><th>What they receive</th></tr></thead>
-          <tbody>
-            <tr><td>Anthropic</td><td>AI features, when on</td><td>The text described under AI features</td></tr>
-            <tr><td>Cloudflare</td><td>Relay for AI requests</td><td>The same text, in transit only</td></tr>
-            <tr><td>TelemetryDeck</td><td>Anonymous usage statistics, <strong>only if you turn them on</strong></td><td>Counts of features used and errors. Never names, notes, symptoms, medications, documents or anything you type.</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>We don't sell personal data, share it for advertising, or use it to track you across apps or websites.</p>
+      <h2>Consent</h2>
+      <p>You choose whether to use AI features when you set Tend up, and you can turn them off at any time in Settings. With AI off, nothing is sent. Usage statistics are off unless you turn them on, and never include health information. Before Tend offers accounts or sharing, we'll update this policy and ask for your consent in the app.</p>
     </div>
 
     <div class="section">
-      <h2>How long we keep it</h2>
-      <p>Your care plan stays on your phone until you delete it or delete the app. We don't keep it at all. Anthropic keeps AI requests only for the limited period its terms describe.</p>
+      <h2>Your rights</h2>
+      <p>You can confirm whether we collect, share or sell your consumer health data, get a list of who receives it, ask for it to be deleted, and withdraw consent. Because your care plan stays on your phone, deleting records in the app or deleting the app removes it. Turning AI off stops anything being sent.</p>
+      <p>For anything else, email <a href="mailto:hello@commongenelabs.com?subject=Health%20data%20request">hello@commongenelabs.com</a> with "Health data request" in the subject. We'll answer within 45 days. That can be extended once by 45 days when reasonably necessary, and we'll tell you why. If we decline, you can appeal by replying to our decision, and we'll answer within 45 days. If you're still not satisfied, you can contact your state attorney general, for example the <a href="https://www.atg.wa.gov/file-complaint" target="_blank" rel="noopener">Washington State Attorney General</a>.</p>
+      <p>We don't discriminate against you for using these rights.</p>
     </div>
 
     <div class="section">
-      <h2>Your choices and rights</h2>
-      <p>In the app you can:</p>
-      <ul>
-        <li><span><strong>Correct</strong> anything by editing it.</span></li>
-        <li><span><strong>Delete</strong> any record, or delete the app to remove everything.</span></li>
-        <li><span><strong>Export</strong> an appointment summary as a PDF or text.</span></li>
-        <li><span><strong>Turn off</strong> AI or usage statistics in Settings.</span></li>
-      </ul>
-      <p>Depending on where you live, you may also have the right to know what we hold, to get a copy, to correct or delete it, and to appeal if we refuse a request. Because your care plan stays on your phone, we usually hold nothing about you. Email <a href="mailto:hello@commongenelabs.com?subject=Privacy%20request">hello@commongenelabs.com</a> with "Privacy request" in the subject and we'll answer within 45 days. If we refuse, reply to appeal and we'll respond within 45 days.</p>
-      <p>If you're in the EU or UK, AI processing relies on your explicit consent, which you give by turning AI on and withdraw by turning it off. You can also complain to your data protection authority.</p>
-    </div>
-
-    <div class="section">
-      <h2>Children</h2>
-      <p>Tend is for adults organizing care. A parent or guardian may keep a care plan for their child. Tend is not directed at children under 13, and we don't knowingly collect information from them.</p>
-    </div>
-
-    <div class="section">
-      <h2>Security</h2>
-      <p>All traffic is encrypted. On the phone, data is protected by iOS data protection, and wound photos are locked until the phone is unlocked. Our AI key never ships in the app.</p>
-    </div>
-
-    <div class="section">
-      <h2>Changes to this policy</h2>
-      <p>We'll update this page when our practices change and change the date at the top. Before Tend offers accounts or sharing, we'll update this policy and ask for your agreement in the app before anything leaves your phone.</p>
+      <h2>Geofencing</h2>
+      <p>We don't use geofencing or location data.</p>
     </div>
 
     <div class="section">
       <h2>Contact</h2>
-      <p>Questions about this policy or how Tend handles data: <a href="mailto:hello@commongenelabs.com">hello@commongenelabs.com</a>. Common Gene Labs, <a href="https://commongenelabs.com">commongenelabs.com</a>.</p>
+      <p><a href="mailto:hello@commongenelabs.com">hello@commongenelabs.com</a> · Common Gene Labs, <a href="https://commongenelabs.com">commongenelabs.com</a></p>
     </div>
   </main>
 
@@ -376,7 +327,7 @@
       <a href="index.html">Back to Tend</a>
       <a href="https://commongenelabs.com/about">About</a>
       <a href="support.html">Support</a>
-      <a href="consumer-health-data.html">Consumer health data</a>
+      <a href="privacy.html">Privacy</a>
       <a href="mailto:hello@commongenelabs.com">Contact</a>
     </div>
   </footer>

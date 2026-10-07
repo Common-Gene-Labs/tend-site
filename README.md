@@ -1,6 +1,6 @@
 # Tend: Recovery Care — Marketing Site
 
-Public marketing site for [Tend: Recovery Care](https://apps.apple.com/us/app/tend-recovery-care/id6760955362), a free iOS app that transforms discharge paperwork into a structured recovery schedule.
+Public marketing site for [Tend: Recovery Care](https://apps.apple.com/us/app/tend-recovery-care/id6760955362), a free iOS app that turns instructions from every doctor into one clear care schedule.
 
 Built and maintained by [Common Gene Labs](https://commongenelabs.com).
 
@@ -10,6 +10,7 @@ Built and maintained by [Common Gene Labs](https://commongenelabs.com).
  
 - `index.html` — Main marketing page
 - `privacy.html` — Privacy policy
+- `consumer-health-data.html` — Consumer health data privacy policy (Washington's My Health My Data Act, Nevada SB 370); must stay linked from the homepage
 - `support.html` — Support page and FAQ
 - `404.html` — Custom 404 page
  
@@ -18,6 +19,10 @@ Built and maintained by [Common Gene Labs](https://commongenelabs.com).
 - `sitemap.xml` — Sitemap for search engine indexing
 - `robots.txt` — Crawler instructions
 - `CNAME` — Custom domain configuration (`tendrecovery.app`)
+- `og-image.png` — 1200×630 social preview
+- `app-icon.png`, `apple-touch-icon.png` — the app icon, full size and 180×180
+
+Keep the privacy pages in step with the app: they're the URLs App Store Connect links to, and the app's privacy policy (`privacy-policy.md` in the app repository) is the source.
 ---
 
 ## Stack
