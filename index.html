@@ -182,8 +182,21 @@
       color: var(--green-light);
     }
 
+    .hero-headline-turn { display: block; }
+
+    .hero-tagline {
+      margin-top: 1.75rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 2.6vw, 2rem);
+      font-weight: 500;
+      color: var(--accent-text);
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.45s forwards;
+    }
+
     .hero-sub {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       font-size: 1.1rem;
       font-weight: 300;
       color: var(--warm-gray);
@@ -751,7 +764,7 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
-      .hero-eyebrow, .hero-headline, .hero-sub, .hero-actions, .hero-detail { opacity: 1; }
+      .hero-eyebrow, .hero-headline, .hero-tagline, .hero-sub, .hero-actions, .hero-detail { opacity: 1; }
       .reveal { opacity: 1; transform: none; }
     }
 
@@ -777,7 +790,8 @@
   <!-- HERO -->
   <section class="hero">
     <p class="hero-eyebrow">Care plans for iPhone &amp; iPad</p>
-    <h1 class="hero-headline">You shouldn't have to hold <em>all of this</em> in your head.</h1>
+    <h1 class="hero-headline">You shouldn’t have to hold it <em>all&nbsp;alone</em>. <span class="hero-headline-turn">Now you don’t have&nbsp;to.</span></h1>
+    <p class="hero-tagline">Tend: care the way it should be—shared.</p>
     <p class="hero-sub">Tend turns the paperwork from every doctor — discharge sheets, clinic letters, medication lists — into one clear schedule with reminders, so nothing gets missed when it matters most.</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/us/app/tend-recovery-care/id6760955362" class="btn-primary">
